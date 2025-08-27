@@ -1,0 +1,18 @@
+<div *ngIf="about?.show" class="about-container mb-4">
+    <p-card>
+        <ng-template pTemplate="header">
+            <div class="card-header">
+                <h2 class="text-2xl font-bold text-900 m-0">
+                    <i class="pi pi-user mr-2"></i>
+                    {{ about?.label }}
+                </h2>
+            </div>
+        </ng-template>
+
+        <div class="about-content">
+            <p class="text-700 line-height-3 text-justify">
+                {{ about?.value }}
+            </p>
+        </div>
+    </p-card>
+</div>

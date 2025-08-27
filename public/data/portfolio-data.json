@@ -1,0 +1,139 @@
+{
+  "license": {
+    "text": "© 2024 Your Name. All rights reserved."
+  },
+  "intro": {
+    "show": true,
+    "name": "Harry Potter",
+    "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    "tagline": "Head Auror at Ministry of Magic",
+    "location": "Based in London, United Kingdom",
+    "quote": "The ones who love us never really leave us."
+  },
+  "about": {
+    "show": true,
+    "label": "About Me",
+    "value": "Experienced wizard and Defense Against the Dark Arts specialist with a proven track record of defeating dark wizards. Graduate of Hogwarts School of Witchcraft and Wizardry, where I served as the youngest Seeker in a century for the Gryffindor Quidditch team. Led Dumbledore's Army and defeated Lord Voldemort. Currently serving as Head Auror at the Ministry of Magic, focusing on magical law enforcement and dark wizard capture."
+  },
+  "resume": {
+    "show": true,
+    "label": "View Resume",
+    "url": "https://example.com/resume-view",
+    "download": "https://example.com/resume-download"
+  },
+  "email": {
+    "address": "harry.potter@ministry.magic",
+    "url": "mailto:harry.potter@ministry.magic"
+  },
+  "contact": {
+    "show": true,
+    "label": "Contact Me"
+  },
+  "links": {
+    "label": "Social & Portfolio Links",
+    "values": [
+      {
+        "label": "LinkedIn",
+        "url": "https://linkedin.com/in/harrypotter",
+        "icon": "pi pi-linkedin"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/harrypotter",
+        "icon": "pi pi-github"
+      },
+      {
+        "label": "Twitter",
+        "url": "https://twitter.com/harrypotter",
+        "icon": "pi pi-twitter"
+      }
+    ]
+  },
+  "skills": {
+    "show": true,
+    "label": "Skills",
+    "values": [
+      {
+        "category": "Magical Abilities",
+        "skills": ["Defense Spells", "Patronus Charm", "Quidditch", "Leadership"]
+      },
+      {
+        "category": "Professional Skills",
+        "skills": ["Investigation", "Team Management", "Strategic Planning", "Training"]
+      }
+    ]
+  },
+  "experiences": {
+    "show": true,
+    "label": "Experiences",
+    "values": [
+      {
+        "workplace": "Ministry of Magic",
+        "website": "ministry-of-magic.uk",
+        "designation": "Head Auror",
+        "start": "May 1998",
+        "end": "Present",
+        "duration": "26+ years",
+        "responsibilities": [
+          "Lead investigations into Dark Magic activities",
+          "Train new Auror recruits",
+          "Coordinate with international magical law enforcement",
+          "Develop advanced defensive spell strategies"
+        ],
+        "shift": "Full Time",
+        "nature": "On-site",
+        "location": "London, UK"
+      }
+    ]
+  },
+  "education": {
+    "show": true,
+    "label": "Education",
+    "values": [
+      {
+        "institute": "Hogwarts School of Witchcraft and Wizardry",
+        "degree": "NEWT Level Education",
+        "result": "Outstanding in Defense Against the Dark Arts",
+        "activities": [
+          "Gryffindor Quidditch Team Captain",
+          "Founded and led Dumbledore's Army",
+          "Triwizard Tournament Champion"
+        ],
+        "start": "1991",
+        "end": "1998",
+        "website": "hogwarts.edu",
+        "location": "Scotland, UK"
+      }
+    ]
+  },
+  "research": {
+    "show": true,
+    "label": "Research",
+    "values": [
+      {
+        "title": "Advanced Defensive Magic: The Power of Love-Based Protection Spells",
+        "authors": "Harry J. Potter, Hermione Granger, Ronald Weasley",
+        "conference": "International Conference on Magical Defense (2020)",
+        "year": "2020",
+        "abstract": "An analysis of ancient love-based protection spells and their modern applications in magical defense",
+        "URL": "https://example.com/research-paper"
+      }
+    ]
+  },
+  "achievements": {
+    "show": true,
+    "label": "Achievements",
+    "values": [
+      {
+        "title": "Order of Merlin, First Class",
+        "event": "Awarded for defeating Lord Voldemort and protecting the wizarding world",
+        "url": "https://example.com/achievement1"
+      },
+      {
+        "title": "Youngest Seeker in Century",
+        "event": "Became Gryffindor Quidditch Seeker at age 11",
+        "url": "https://example.com/achievement2"
+      }
+    ]
+  }
+}

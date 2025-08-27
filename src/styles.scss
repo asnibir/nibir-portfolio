@@ -1,1 +1,147 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background: var(--surface-ground);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Custom CSS Variables */
+:root {
+  --custom-primary: #3b82f6;
+  --custom-primary-50: #eff6ff;
+  --custom-primary-100: #dbeafe;
+  --custom-primary-200: #bfdbfe;
+  --custom-surface-hover: #f8fafc;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-300);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-400);
+}
+
+/* Custom Card Styling */
+.p-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--surface-200);
+  transition: all 0.3s ease;
+}
+
+.p-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Button Enhancements */
+.p-button {
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.p-button:not(.p-button-outlined):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Chip Styling */
+.p-chip {
+  border-radius: 20px;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: var(--text-color-secondary);
+  margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .p-card {
+    margin: 0 0.5rem;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  .flex > * {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .p-button {
+    display: none !important;
+  }
+
+  .p-card {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+}

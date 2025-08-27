@@ -1,0 +1,33 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, var(--surface-50) 0%, var(--surface-100) 100%);
+}
+
+.content-wrapper {
+  flex: 1;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.portfolio-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 1rem 0.5rem;
+  }
+}

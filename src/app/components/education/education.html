@@ -1,0 +1,48 @@
+<div *ngIf="education?.show && education?.values?.length" class="education-container mb-4">
+    <p-card>
+        <ng-template pTemplate="title">
+            <div class="card-header">
+                <h2 class="text-2xl font-bold text-900 m-0">
+                    <i class="pi pi-graduation-cap mr-2"></i>
+                    {{ education?.label }}
+                </h2>
+            </div>
+        </ng-template>
+
+        <ng-template pTemplate="content">
+            <div class="education-content">
+                <div *ngFor="let edu of education?.values; let i = index" class="education-item mb-4">
+                    <div class="flex justify-content-between align-items-start flex-wrap gap-3 mb-3">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-900 mb-1">{{ edu.degree }}</h3>
+                            <div class="flex align-items-center gap-2 mb-2">
+                                <span class="text-lg font-medium text-primary">{{ edu.institute }}</span>
+                                <p-button *ngIf="edu.website" icon="pi pi-external-link" [text]="true" size="small"
+                                    (onClick)="openWebsite(edu.website)" pTooltip="Visit website"></p-button>
+                            </div>
+                            <p class="text-600 mb-2">{{ edu.start }} - {{ edu.end }}</p>
+                            <p class="text-600 mb-3">{{ edu.location }}</p>
+                        </div>
+                    </div>
+
+                    <div *ngIf="edu.result" class="result-section mb-3">
+                        <h4 class="text-lg font-semibold text-800 mb-2">Academic Performance</h4>
+                        <p-tag [value]="edu.result" icon="pi pi-trophy" class="result-tag"></p-tag>
+                    </div>
+
+                    <div *ngIf="edu.activities?.length" class="activities-section mb-3">
+                        <h4 class="text-lg font-semibold text-800 mb-2">Activities</h4>
+                        <ul class="list-none p-0 m-0">
+                            <li *ngFor="let activity of edu.activities" class="flex align-items-start gap-2 mb-2">
+                                <i class="pi pi-star-fill text-primary mt-1"></i>
+                                <span class="text-700">{{ activity }}</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <hr *ngIf="i < (education?.values?.length || 0) - 1" class="my-4">
+                </div>
+            </div>
+        </ng-template>
+    </p-card>
+</div>

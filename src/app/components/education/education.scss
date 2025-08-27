@@ -1,0 +1,45 @@
+.education-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card-header {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.education-content {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.education-item {
+  border-left: 3px solid var(--orange-500);
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.education-item::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  background-color: var(--orange-500);
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 0 3px var(--orange-500);
+}
+
+.result-chip {
+  background: linear-gradient(135deg, var(--orange-100) 0%, var(--orange-200) 100%);
+  color: var(--orange-800);
+  border: 1px solid var(--orange-300);
+}
+
+.activities-section ul li {
+  transition: all 0.2s ease;
+}
+
+.activities-section ul li:hover {
+  padding-left: 0.5rem;
+}

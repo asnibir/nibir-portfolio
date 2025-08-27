@@ -1,0 +1,51 @@
+<div *ngIf="experiences?.show && experiences?.values?.length" class="experience-container mb-4">
+    <p-card>
+        <ng-template pTemplate="title">
+            <div class="card-header">
+                <h2 class="text-2xl font-bold text-900 m-0">
+                    <i class="pi pi-briefcase mr-2"></i>
+                    {{ experiences?.label }}
+                </h2>
+            </div>
+        </ng-template>
+
+        <ng-template pTemplate="content">
+            <div class="experience-content">
+                <div *ngFor="let exp of experiences?.values; let i = index" class="experience-item mb-4">
+                    <div class="flex justify-content-between align-items-start flex-wrap gap-3 mb-3">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-900 mb-1">{{ exp.designation }}</h3>
+                            <div class="flex align-items-center gap-2 mb-2">
+                                <span class="text-lg font-medium text-primary">{{ exp.workplace }}</span>
+                                <p-button *ngIf="exp.website" icon="pi pi-external-link" [text]="true" size="small"
+                                    (onClick)="openWebsite(exp.website)" pTooltip="Visit website"></p-button>
+                            </div>
+                            <p class="text-600 mb-2">{{ exp.start }} - {{ exp.end }}</p>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <p-tag [value]="exp.shift" icon="pi pi-clock"></p-tag>
+                                <p-tag [value]="exp.nature" icon="pi pi-map-marker"></p-tag>
+                                <p-tag [value]="exp.location" icon="pi pi-globe"></p-tag>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-sm font-medium text-500">{{ exp.duration }}</span>
+                        </div>
+                    </div>
+
+                    <div class="responsibilities mb-3">
+                        <h4 class="text-lg font-semibold text-800 mb-2">Responsibilities</h4>
+                        <ul class="list-none p-0 m-0">
+                            <li *ngFor="let responsibility of exp.responsibilities"
+                                class="flex align-items-start gap-2 mb-2">
+                                <i class="pi pi-check-circle text-primary mt-1"></i>
+                                <span class="text-700">{{ responsibility }}</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <hr *ngIf="i < (experiences?.values?.length || 0) - 1" class="my-4">
+                </div>
+            </div>
+        </ng-template>
+    </p-card>
+</div>

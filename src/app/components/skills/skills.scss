@@ -1,0 +1,49 @@
+.skills-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card-header {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.skills-content {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.skill-category {
+  border-left: 3px solid var(--primary-color);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.skill-category::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 0.5rem;
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.skill-chip {
+  background: linear-gradient(135deg, var(--primary-100) 0%, var(--primary-200) 100%);
+  color: var(--primary-800);
+  border: 1px solid var(--primary-300);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.skill-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, var(--primary-200) 0%, var(--primary-300) 100%);
+}
+
+::ng-deep .skill-chip .p-chip-text {
+  font-weight: 500;
+}

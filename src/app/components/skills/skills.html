@@ -1,0 +1,23 @@
+<div *ngIf="skills?.show && skills?.values?.length" class="skills-container mb-4">
+    <p-card>
+        <ng-template pTemplate="title">
+            <div class="card-header">
+                <h2 class="text-2xl font-bold text-900 m-0">
+                    <i class="pi pi-star mr-2"></i>
+                    {{ skills?.label }}
+                </h2>
+            </div>
+        </ng-template>
+
+        <ng-template pTemplate="content">
+            <div class="skills-content">
+                <div *ngFor="let skillCategory of skills?.values" class="skill-category mb-4">
+                    <h3 class="text-lg font-semibold text-800 mb-3">{{ skillCategory.category }}</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <p-tag *ngFor="let skill of skillCategory.skills" [value]="skill" class="skill-tag"></p-tag>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-card>
+</div>

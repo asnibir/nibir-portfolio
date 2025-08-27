@@ -1,0 +1,44 @@
+.experience-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card-header {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.experience-content {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.experience-item {
+  border-left: 3px solid var(--primary-color);
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.experience-item::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 0 3px var(--primary-color);
+}
+
+.responsibilities ul li {
+  transition: all 0.2s ease;
+}
+
+.responsibilities ul li:hover {
+  padding-left: 0.5rem;
+}
+
+.p-chip {
+  background-color: var(--primary-50);
+  color: var(--primary-700);
+}

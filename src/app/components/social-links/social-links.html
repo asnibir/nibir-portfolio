@@ -1,0 +1,22 @@
+<div *ngIf="links?.values?.length" class="social-links-container mb-4">
+    <p-card>
+        <ng-template pTemplate="header">
+            <div class="card-header">
+                <h2 class="text-2xl font-bold text-900 m-0">
+                    <i class="pi pi-link mr-2"></i>
+                    {{ links?.label }}
+                </h2>
+            </div>
+        </ng-template>
+
+        <ng-template pTemplate="content">
+            <div class="social-links-content">
+                <div class="flex flex-wrap gap-3 justify-content-center">
+                    <p-button *ngFor="let link of links?.values" [label]="link.label" [icon]="link.icon"
+                        [outlined]="true" class="p-button-sm" (click)="openLink(link.url)">
+                    </p-button>
+                </div>
+            </div>
+        </ng-template>
+    </p-card>
+</div>
